@@ -18,9 +18,7 @@ function App() {
         <Route exact path="/rooms">
           <Rooms></Rooms>
         </Route>
-        <Route exact path="/rooms/:slug">
-          <SingleRoom></SingleRoom>
-        </Route>
+        <Route exact path="/rooms/:slug" component={SingleRoom}></Route>
         <Route>
           <Error></Error>
         </Route>
