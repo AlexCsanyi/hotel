@@ -5,7 +5,7 @@
 }
 :root {
   --primaryYellow: #f8b90d;
-  --primaryColor: #af9a7d;
+  --primaryColor: #f8b90d;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #121212;
@@ -250,10 +250,36 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .roomsHero {
   background-image: url("./images/room-2.jpeg");
   min-height: 60vh;
+}
+
+.alt-nav {
+  color: var(--mainWhite);
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  font-size: 34px;
+}
+
+.alt-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.alt-nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mainWhite);
+  text-decoration: none;
 }
 /* End of Hero */
 /* Banner */
