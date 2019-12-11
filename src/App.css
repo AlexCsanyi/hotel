@@ -10,10 +10,10 @@
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
-  --mainTransition: all 0.3s linear;
+  --mainTransition: all 0.3s ease-in-out;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(63, 35, 35, 0.5) 0.5;
 }
 /* globals */
 body {
@@ -97,10 +97,32 @@ h6 {
   background: var(--offWhite);
   z-index: 1;
 }
+
 .nav-header {
   display: flex;
   justify-content: space-between;
 }
+
+.nav-header a {
+  text-decoration: none;
+  color: var(--mainBlack);
+  text-align: center;
+}
+
+.nav-header a h1,
+.nav-header a p {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header a h1 {
+  font-size: 1.5rem;
+}
+
+.nav-header a h1 sup {
+  font-size: 0.7rem;
+}
+
 .nav-btn {
   background: transparent;
   border: none;
@@ -127,9 +149,27 @@ h6 {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
+  position: relative;
 }
-.nav-links a:hover {
-  color: var(--primaryColor);
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: var(--mainTransition);
+  transition-duration: 0.75s;
+  background-color: #000;
+}
+
+.nav-links a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .show-nav {
@@ -143,6 +183,8 @@ h6 {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .nav-links {
     height: auto;
