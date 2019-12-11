@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 :root {
+  --primaryYellow: #f8b90d;
   --primaryColor: #af9a7d;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
-  --mainBlack: #222;
+  --mainBlack: #121212;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s ease-in-out;
@@ -94,7 +95,7 @@ h6 {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--offWhite);
+  background: var(--primaryYellow);
   z-index: 1;
 }
 
@@ -159,12 +160,11 @@ h6 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: var(--mainWhite);
   visibility: hidden;
   transform: scaleX(0);
   transition: var(--mainTransition);
   transition-duration: 0.75s;
-  background-color: #000;
 }
 
 .nav-links a:hover::before {
@@ -172,8 +172,32 @@ h6 {
   transform: scaleX(1);
 }
 
+.book-now-btn {
+  text-decoration: none;
+  color: var(--mainWhite);
+  display: block;
+  font-size: 24px;
+  height: 60px;
+  width: 310px;
+  line-height: 60px;
+  text-align: center;
+  background: linear-gradient(to right, white 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+
+.book-now-btn:hover {
+  background-position: left bottom;
+  color: var(--mainBlack);
+}
+
+.mobile-only {
+  display: none;
+}
+
 .show-nav {
-  height: 100px;
+  height: 200px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -183,17 +207,38 @@ h6 {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   .nav-links {
     height: auto;
     display: flex;
-    margin-left: 4rem;
   }
   .nav-links a {
     margin: 0 1rem;
     padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .book-now-btn {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links a::before {
+    display: none;
+  }
+
+  .book-now-btn {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+    background-color: var(--mainWhite);
+    font-size: 24px;
+    text-align: center;
   }
 }
 /* end of navbar */

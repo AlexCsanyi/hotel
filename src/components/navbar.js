@@ -39,7 +39,13 @@ export default class Navbar extends Component {
             <li>
               <Link to="/rooms">Rooms</Link>
             </li>
+            <li className="mobile-only">
+              <Link to="/rooms">BOOK NOW</Link>
+            </li>
           </ul>
+          <Link className="book-now-btn" to="/rooms">
+            BOOK NOW
+          </Link>
         </div>
       </nav>
     );
