@@ -414,6 +414,27 @@ h6 {
 }
 
 /*end of services */
+/* Things to do - Description */
+
+.things-to-do {
+  text-align: center;
+  padding: 50px;
+}
+
+.things-to-do-inner {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.things-to-do-inner p {
+  margin-top: 30px;
+}
+
+.things-to-do-inner h3 {
+  margin-top: 30px;
+}
+
+/* End of Things to do - Description */
 /* featured rooms */
 
 .featured-rooms {
