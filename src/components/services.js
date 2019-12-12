@@ -1,33 +1,37 @@
 import React, { Component } from "react";
 import Title from "./title";
-import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from "react-icons/fa";
+import AnimatedButton from "./AnimatedButton";
+import foodImg from "../images/food.jpg";
+import meetingImg from "../images/meeting.jpg";
+import bedImg from "../images/bed.jpg";
+import dogImg from "../images/dog.jpg";
 
 export default class Services extends Component {
   state = {
     services: [
       {
-        icon: <FaCocktail></FaCocktail>,
-        title: "free cocktails",
+        title: "Treat your delegates",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, corrupti"
+          " If you need break-out areas, a garden for unique team building or simply extra coffee. We have got the space.",
+        background: meetingImg
       },
       {
-        icon: <FaHiking></FaHiking>,
-        title: "Endless hiking",
+        title: "Snug as a bug",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, corrupti"
+          "Here, the priority is comfort. No matter what brings you here, get comfy, get cosy and just relax.",
+        background: bedImg
       },
       {
-        icon: <FaShuttleVan></FaShuttleVan>,
-        title: "free shuttle",
+        title: "Peckish?",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, corrupti"
+          "Our Chef knows his way with food. Pop over to the Conservatory for a culinary experience you’ll never forget.",
+        background: foodImg
       },
       {
-        icon: <FaBeer></FaBeer>,
-        title: "Crafted beer",
+        title: "Your best friend",
         info:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, corrupti"
+          "Bring your fluffy friends along. There's plenty of space to run, jump and sniff. Let them explore our perfectly groomed lawns",
+        background: dogImg
       }
     ]
   };
@@ -39,10 +43,20 @@ export default class Services extends Component {
         <div className="services-center">
           {this.state.services.map((item, index) => {
             return (
-              <article key={index} className="service">
-                <span>{item.icon}</span>
-                <h6>{item.title}</h6>
-                <p>{item.info}</p>
+              <article
+                style={{ background: `url(${item.background})` }}
+                key={index}
+                className="service"
+              >
+                <div className="inner">
+                  <h3>{item.title}</h3>
+                  <p>{item.info}</p>
+                  <AnimatedButton
+                    width="200px"
+                    title="Discover More"
+                    to="/rooms"
+                  ></AnimatedButton>
+                </div>
               </article>
             );
           })}

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaAlignRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import AnimatedButton from "./AnimatedButton";
 
 export default class Navbar extends Component {
   state = {
@@ -43,9 +44,7 @@ export default class Navbar extends Component {
               <Link to="/rooms">BOOK NOW</Link>
             </li>
           </ul>
-          <Link className="book-now-btn" to="/rooms">
-            BOOK NOW
-          </Link>
+          <AnimatedButton width='310px' title="BOOK NOW" to="/rooms"></AnimatedButton>
         </div>
       </nav>
     );
