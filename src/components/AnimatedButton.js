@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function AnimatedButton({ title, to, width }) {
+export default function AnimatedButton({ title, to }) {
   return (
-    <Link style={{ width: width }} className="book-now-btn" to={to}>
+    <Link className="book-now-btn" to={to}>
       {title}
     </Link>
   );

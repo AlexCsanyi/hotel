@@ -96,7 +96,7 @@ h6 {
   width: 100%;
   padding: 0.75rem 2rem;
   background: var(--primaryYellow);
-  z-index: 1;
+  z-index: 3;
 }
 
 .nav-header {
@@ -178,7 +178,7 @@ h6 {
   display: block;
   font-size: 24px;
   height: 60px;
-  /* width: 310px; */
+  width: 310px;
   line-height: 60px;
   text-align: center;
   background: linear-gradient(to right, white 50%, black 50%);
@@ -357,7 +357,6 @@ h6 {
 .services-center article {
   flex: 0 1 25%;
   height: 350px;
-  border: 1px solid #000;
   position: relative;
 }
 
@@ -367,7 +366,7 @@ h6 {
   bottom: 30px;
   left: 11%;
   color: var(--mainWhite);
-  z-index: 3;
+  z-index: 2;
 }
 
 .services h3 {
@@ -376,6 +375,30 @@ h6 {
 }
 .services p {
   margin-bottom: 10px;
+}
+
+.discover-more-btn {
+  text-decoration: none;
+  color: var(--mainBlack);
+  display: block;
+  font-size: 24px;
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    var(--mainBlack) 50%,
+    var(--primaryYellow) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+
+.discover-more-btn:hover {
+  background-position: left bottom;
+  color: var(--mainWhite);
 }
 
 @media screen and (max-width: 60em) {

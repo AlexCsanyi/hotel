@@ -44,7 +44,7 @@ export default class Navbar extends Component {
               <Link to="/rooms">BOOK NOW</Link>
             </li>
           </ul>
-          <AnimatedButton width='310px' title="BOOK NOW" to="/rooms"></AnimatedButton>
+          <AnimatedButton title="BOOK NOW" to="/rooms"></AnimatedButton>
         </div>
       </nav>
     );

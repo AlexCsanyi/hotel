@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Title from "./title";
-import AnimatedButton from "./AnimatedButton";
+import { Link } from "react-router-dom";
 import foodImg from "../images/food.jpg";
 import meetingImg from "../images/meeting.jpg";
 import bedImg from "../images/bed.jpg";
@@ -51,11 +51,9 @@ export default class Services extends Component {
                 <div className="inner">
                   <h3>{item.title}</h3>
                   <p>{item.info}</p>
-                  <AnimatedButton
-                    width="200px"
-                    title="Discover More"
-                    to="/rooms"
-                  ></AnimatedButton>
+                  <Link className="discover-more-btn" to="/rooms">
+                    Discover More
+                  </Link>
                 </div>
               </article>
             );
