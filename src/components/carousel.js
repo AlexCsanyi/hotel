@@ -1,7 +1,6 @@
 import React from "react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import "../../node_modules/react-multi-carousel/lib/styles.css";
 
 export default function MyCarousel() {
   const responsive = {
@@ -22,25 +21,26 @@ export default function MyCarousel() {
     }
   };
 
-  const CustomRightArrow = () => {
-    return <FaAngleRight></FaAngleRight>;
-  };
-
-  const CustomLeftArrow = () => {
-    return <FaAngleLeft></FaAngleLeft>;
-  };
-
   return (
     <div>
       <Carousel
         responsive={responsive}
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
+        infinite={true}
+        keyBoardControl={true}
+        removeArrowOnDeviceType={["tablet", "mobile"]}
       >
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
+        <div style={{ margin: "40px", height: "150px", background: "#000" }}>
+          Item 1
+        </div>
+        <div style={{ margin: "40px", height: "150px", background: "#000" }}>
+          Item 2
+        </div>
+        <div style={{ margin: "40px", height: "150px", background: "#000" }}>
+          Item 3
+        </div>
+        <div style={{ margin: "40px", height: "150px", background: "#000" }}>
+          Item 4
+        </div>
       </Carousel>
     </div>
   );
