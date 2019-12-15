@@ -281,6 +281,19 @@ h6 {
   color: var(--mainWhite);
   text-decoration: none;
 }
+
+@media screen and (max-width: 40em) {
+  .alt-nav ul {
+    flex-direction: column;
+    justify-content: start;
+    padding: 0;
+    width: 100%;
+  }
+
+  .alt-nav ul li a {
+    font-size: 20px;
+  }
+}
 /* End of Hero */
 /* Banner */
 .banner {
@@ -476,7 +489,23 @@ h6 {
 .carousel-card-container a {
   position: absolute;
   bottom: 15px;
-  left: 75px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+@media screen and (max-width: 60em) {
+  .things-to-do {
+    padding: 10px;
+  }
+
+  .things-to-do-inner {
+    width: 100%;
+    margin: 0;
+  }
+
+  .carousel-card-container {
+    width: 100%;
+  }
 }
 
 /* End of Things to do - Description */
