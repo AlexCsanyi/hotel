@@ -434,6 +434,51 @@ h6 {
   margin-top: 30px;
 }
 
+.react-multi-carousel-list {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-card-container {
+  text-align: center;
+  width: 350px;
+  padding: 10px;
+  height: 700px;
+  position: relative;
+}
+
+.carousel-card-container .image-container {
+  width: 100%;
+  height: 350px;
+}
+
+.football {
+  background: url(./images/football.jpg) center;
+}
+
+.stage {
+  background: url(./images/theatre.jpg);
+}
+
+.music {
+  background: url(./images/music.jpg);
+}
+
+.carousel-card-container hr {
+  border-top: 1px solid var(--primaryYellow);
+  width: 80%;
+  margin: 15px auto;
+}
+
+.carousel-card-container p {
+  font-size: 14px;
+}
+
+.carousel-card-container a {
+  position: absolute;
+  bottom: 15px;
+  left: 75px;
+}
+
 /* End of Things to do - Description */
 /* featured rooms */
 
