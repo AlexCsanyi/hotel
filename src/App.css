@@ -511,6 +511,45 @@ h6 {
 /* End of Things to do - Description */
 
 /* MAP */
+
+.map-nav {
+  height: 200px;
+  width: 100%;
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-nav nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-nav nav h1 {
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 0;
+}
+
+.map-nav nav p {
+  border: 1px solid var(--primaryYellow);
+  padding: 5px;
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+
+.map-nav nav p:hover,
+.map-nav nav p:focus {
+  background-color: var(--primaryYellow);
+}
+
+.active-map {
+  background-color: var(--primaryYellow);
+}
+
 .marker-btn {
   cursor: pointer;
   color: var(--primaryYellow);
@@ -521,6 +560,12 @@ h6 {
   text-align: center;
   width: 240px;
   height: auto;
+}
+
+@media screen and (max-width: 60em) {
+  .map-nav nav {
+    flex-direction: column;
+  }
 }
 /* END MAP */
 
