@@ -520,6 +520,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .map-nav nav {
@@ -528,17 +529,14 @@ h6 {
   align-items: center;
 }
 
-.map-nav nav h1 {
-  padding-right: 40px;
-  padding-left: 40px;
-  margin: 0;
-}
-
 .map-nav nav p {
   border: 1px solid var(--primaryYellow);
   padding: 5px;
   transition: var(--mainTransition);
   cursor: pointer;
+  margin: 20px;
+  width: 180px;
+  text-align: center;
 }
 
 .map-nav nav p:hover,
@@ -563,8 +561,8 @@ h6 {
 }
 
 @media screen and (max-width: 60em) {
-  .map-nav nav {
-    flex-direction: column;
+  .map-nav nav p {
+    margin: 5px 5px;
   }
 }
 /* END MAP */

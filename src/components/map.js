@@ -58,6 +58,7 @@ export default function Map() {
   return (
     <React.Fragment>
       <div className="map-nav">
+        <h1>Out & About</h1>
         <nav>
           <p
             onClick={e => {
@@ -68,7 +69,6 @@ export default function Map() {
           >
             On our doorstep
           </p>
-          <h1>Out & About</h1>
           <p
             onClick={e => {
               e.preventDefault();
