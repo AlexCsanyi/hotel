@@ -30,7 +30,7 @@ export default function Map() {
         latitude: 49.408412,
         longitude: 8.689417,
         description:
-          "When do we feel happiness? What happens to our body? Why can't we keep it forever? Plastinator Dr. Gunther von Hagens and curator Dr. Angelina Whalley pursue these and other questions in the newly designed BODY WORLDS museum in Heidelberg."
+          "When do we feel happiness? What happens to our body? Plastinator Dr. Gunther von Hagens and curator Dr. Angelina Whalley pursue these questions in the newly designed BODY WORLDS museum."
       },
       {
         id: "AA3",
