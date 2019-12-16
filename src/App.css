@@ -509,6 +509,21 @@ h6 {
 }
 
 /* End of Things to do - Description */
+
+/* MAP */
+.marker-btn {
+  cursor: pointer;
+  color: var(--primaryYellow);
+  font-size: 50px;
+}
+
+.marker-popup {
+  text-align: center;
+  width: 240px;
+  height: auto;
+}
+/* END MAP */
+
 /* featured rooms */
 
 .featured-rooms {
