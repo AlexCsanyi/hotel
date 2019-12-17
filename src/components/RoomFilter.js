@@ -49,7 +49,7 @@ export default function RoomFilter({ rooms }) {
           <label htmlFor="type">Room Type</label>
           <select
             onChange={handleChange}
-            className="form-control"
+            className="form-control select-css"
             name="type"
             id="type"
             value={type}
@@ -61,7 +61,7 @@ export default function RoomFilter({ rooms }) {
           <label htmlFor="capacity">Guests</label>
           <select
             onChange={handleChange}
-            className="form-control"
+            className="form-control select-css"
             name="capacity"
             id="capacity"
             value={capacity}
@@ -79,7 +79,7 @@ export default function RoomFilter({ rooms }) {
             id="price"
             value={price}
             onChange={handleChange}
-            className="form-control flat-slider"
+            className="form-control"
           ></input>
         </div>
         <div className="form-group">
