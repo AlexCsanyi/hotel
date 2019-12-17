@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactMapGl, { Marker, Popup } from "react-map-gl";
 import { GiFootprint } from "react-icons/gi";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import "../../node_modules/mapbox-gl/src/css/mapbox-gl.css";
 
 export default function Map() {
   const [viewport, setViewport] = useState({
@@ -56,7 +57,7 @@ export default function Map() {
   const [defaultMap, updateMap] = useState(true);
 
   return (
-    <React.Fragment>
+    <div className="map-container mapboxgl-map">
       <div className="map-nav">
         <h1>Out & About</h1>
         <nav>
@@ -83,6 +84,7 @@ export default function Map() {
       {defaultMap ? (
         <ReactMapGl
           {...viewport}
+          containerStyle={{ width: "100%" }}
           mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
           onViewportChange={viewport => setViewport(viewport)}
         >
@@ -151,6 +153,6 @@ export default function Map() {
           ) : null}
         </ReactMapGl>
       )}
-    </React.Fragment>
+    </div>
   );
 }

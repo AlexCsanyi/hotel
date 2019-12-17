@@ -512,6 +512,10 @@ h6 {
 
 /* MAP */
 
+.map-container {
+  width: 100%;
+}
+
 .map-nav {
   height: 200px;
   width: 100%;
