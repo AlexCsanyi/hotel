@@ -79,7 +79,7 @@ export default function RoomFilter({ rooms }) {
             id="price"
             value={price}
             onChange={handleChange}
-            className="form-control"
+            className="form-control flat-slider"
           ></input>
         </div>
         <div className="form-group">

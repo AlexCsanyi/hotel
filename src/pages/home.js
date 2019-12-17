@@ -5,7 +5,6 @@ import Services from "../components/services";
 import FeaturedRooms from "../components/featuredRooms";
 import Description from "../components/description";
 import Map from "../components/map";
-import Footer from "../components/footer";
 
 const Home = () => {
   return (
@@ -17,7 +16,6 @@ const Home = () => {
       <Description></Description>
       <FeaturedRooms></FeaturedRooms>
       <Map></Map>
-      <Footer></Footer>
     </React.Fragment>
   );
 };

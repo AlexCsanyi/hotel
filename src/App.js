@@ -6,6 +6,7 @@ import SingleRoom from "./pages/singleRoom";
 import Error from "./pages/error";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Error></Error>
         </Route>
       </Switch>
+      <Footer></Footer>
     </div>
   );
 }

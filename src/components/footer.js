@@ -4,6 +4,7 @@ import { FaFacebookSquare, FaInstagram, FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (
     <React.Fragment>
+      <hr className="footer-section-divider"></hr>
       <footer>
         <div className="footer-social-container">
           <a
