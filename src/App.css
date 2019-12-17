@@ -514,6 +514,7 @@ h6 {
 
 .map-container {
   width: 100%;
+  cursor: grab;
 }
 
 .map-nav {
@@ -570,7 +571,34 @@ h6 {
   }
 }
 /* END MAP */
+/* FOOTER */
 
+footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.footer-social-container {
+  margin-bottom: 35px;
+}
+
+.footer-social-container a {
+  text-decoration: none;
+  color: var(--mainBlack);
+  cursor: pointer;
+}
+
+.footer-social-container svg {
+  font-size: 60px;
+}
+
+.footer-privacy {
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+  text-align: center;
+}
+/* END FOOTER */
 /* featured rooms */
 
 .featured-rooms {
@@ -652,7 +680,8 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .room-info {
-  background: var(--darkGrey);
+  background: var(--mainBlack);
+  color: var(--mainWhite);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
