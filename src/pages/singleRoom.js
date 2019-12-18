@@ -61,7 +61,7 @@ export default class SingleRoom extends Component {
             ))}
           </div>
           <div className="single-room-info">
-            <article className="description">
+            <article className="description active-tab">
               <h3>Details</h3>
               <p>{description}</p>
             </article>

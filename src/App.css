@@ -714,21 +714,23 @@ footer {
   grid-template-columns: 1fr;
   margin: 2rem auto;
 }
-.desc,
+.description,
 .info {
   margin: 1rem 0;
 }
-.desc h3 {
+
+.description h3 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
-.desc p {
+.description p {
   line-height: 1.5;
 }
 .info h3,
 .info h6 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
+  padding: 0;
 }
 
 .info h6 {

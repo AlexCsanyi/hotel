@@ -95,7 +95,6 @@ export default function RoomFilter({ rooms }) {
             <input
               type="number"
               name="minSize"
-              id="size"
               value={minSize}
               onChange={handleChange}
               className="size-input"
@@ -103,7 +102,6 @@ export default function RoomFilter({ rooms }) {
             <input
               type="number"
               name="maxSize"
-              id="size"
               value={maxSize}
               onChange={handleChange}
               className="size-input"
