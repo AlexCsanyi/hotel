@@ -2,6 +2,9 @@ import React from "react";
 import { useContext } from "react";
 import { RoomContext } from "../context";
 import Title from "./title";
+import { FaBed } from "react-icons/fa";
+import { MdPeople } from "react-icons/md";
+import { IoMdResize, IoMdPricetag } from "react-icons/io";
 
 const getUnique = (items, value) => {
   return [...new Set(items.map(item => item[value]))];
@@ -47,6 +50,7 @@ export default function RoomFilter({ rooms }) {
       <form className="filter-form">
         <div className="form-group">
           <label htmlFor="type">Room Type</label>
+          <FaBed className="filter-icon"></FaBed>
           <select
             onChange={handleChange}
             className="form-control select-css"
@@ -59,6 +63,7 @@ export default function RoomFilter({ rooms }) {
         </div>
         <div className="form-group">
           <label htmlFor="capacity">Guests</label>
+          <MdPeople className="filter-icon"></MdPeople>
           <select
             onChange={handleChange}
             className="form-control select-css"
@@ -71,6 +76,7 @@ export default function RoomFilter({ rooms }) {
         </div>
         <div className="form-group">
           <label htmlFor="price">Room Price £{price}</label>
+          <IoMdPricetag className="filter-icon"></IoMdPricetag>
           <input
             type="range"
             name="price"
@@ -84,6 +90,7 @@ export default function RoomFilter({ rooms }) {
         </div>
         <div className="form-group">
           <label htmlFor="size">Room Size</label>
+          <IoMdResize className="filter-icon"></IoMdResize>
           <div className="size-inputs">
             <input
               type="number"
