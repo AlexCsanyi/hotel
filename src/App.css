@@ -963,3 +963,93 @@ input[type="checkbox"] {
   }
 }
 /* end of rooms fitler*/
+
+/* Tabs */
+.tabs-container {
+  margin: 3rem auto 3rem auto;
+  height: 450px;
+}
+
+.tabbed {
+  box-sizing: border-box;
+  margin: 50px auto;
+  width: 700px;
+}
+
+::selection {
+  background-color: var(--primaryYellow);
+}
+
+.tabs-title {
+  margin-top: 25px;
+}
+
+.tabbed > input {
+  display: none;
+}
+
+.tabbed > label {
+  display: block;
+  float: left;
+  padding: 12px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabbed > label:hover,
+.tabbed > input:checked + label {
+  background: var(--primaryYellow);
+}
+
+.tabs {
+  clear: both;
+  perspective: 600px;
+}
+
+.tabs > div {
+  width: 700px;
+  position: absolute;
+  border: 2px solid var(--primaryYellow);
+  padding: 10px 30px 40px;
+  line-height: 1.4em;
+  opacity: 0;
+  transform: rotateX(-20deg);
+  transform-origin: top center;
+  transition: opacity 0.3s, transform 1s;
+  z-index: 0;
+}
+
+#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+#tab-nav-3:checked ~ .tabs > div:nth-of-type(3) {
+  transform: rotateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .tabs-container {
+    height: min-content;
+  }
+  .tabbed {
+    width: 400px;
+  }
+  .tabbed > label {
+    display: none;
+  }
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+  }
+  .tabs > div h2 {
+    border-bottom: 2px solid var(--primaryYellow);
+    padding-bottom: 0.5em;
+  }
+}
+/* End of Tabs */

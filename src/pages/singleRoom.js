@@ -60,31 +60,46 @@ export default class SingleRoom extends Component {
               <img src={item} key={index} alt="bedroom"></img>
             ))}
           </div>
-          <div className="single-room-info">
-            <article className="description active-tab">
-              <h3>Details</h3>
-              <p>{description}</p>
-            </article>
-            <article className="info">
-              <h3>Info</h3>
-              <h6>price: £{price}</h6>
-              <h6>size: {size}SqFt</h6>
-              <h6>
-                max capacity:{" "}
-                {capacity > 1 ? `${capacity} people` : `${capacity} person`}
-              </h6>
-              <h6>{pets ? "pets allowed" : "no pets allowed"}</h6>
-              <h6>{breakfast && "free breakfast included"}</h6>
-            </article>
+          <div className="tabs-container">
+            <div className="tabbed">
+              <input
+                type="radio"
+                name="tabs"
+                id="tab-nav-1"
+                defaultChecked
+              ></input>
+              <label htmlFor="tab-nav-1">Details</label>
+              <input type="radio" name="tabs" id="tab-nav-2"></input>
+              <label htmlFor="tab-nav-2">Info</label>
+              <input type="radio" name="tabs" id="tab-nav-3"></input>
+              <label htmlFor="tab-nav-3">Extras</label>
+              <div className="tabs">
+                <div>
+                  <h2 className="tabs-title">Details</h2>
+                  <p>{description}</p>
+                </div>
+                <div>
+                  <h2 className="tabs-title">Info</h2>
+                  <p>price: £{price}</p>
+                  <p>size: {size}SqFt</p>
+                  <p>
+                    max capacity:{" "}
+                    {capacity > 1 ? `${capacity} people` : `${capacity} person`}
+                  </p>
+                  <p>{pets ? "pets allowed" : "no pets allowed"}</p>
+                  <p>{breakfast && "free breakfast included"}</p>
+                </div>
+                <div>
+                  <h2 className="tabs-title">Extras</h2>
+                  <ul className="extras">
+                    {extras.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-        <section className="room-extras">
-          <h6>Extras</h6>
-          <ul className="extras">
-            {extras.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
         </section>
       </React.Fragment>
     );
