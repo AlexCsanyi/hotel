@@ -85,7 +85,7 @@ export default function Map() {
         <ReactMapGl
           {...viewport}
           containerStyle={{ width: "100%" }}
-          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          mapboxApiAccessToken="pk.eyJ1IjoiYWxleGNzYW55aSIsImEiOiJjazQ2czZhM3Ewam5tM2VsOWM0d25vaHB4In0.scz7zohNrAPJOgyySWeYmw"
           onViewportChange={viewport => setViewport(viewport)}
         >
           {markerData.mark.map(point => (
@@ -120,7 +120,7 @@ export default function Map() {
       ) : (
         <ReactMapGl
           {...viewport}
-          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          mapboxApiAccessToken="pk.eyJ1IjoiYWxleGNzYW55aSIsImEiOiJjazQ2czZhM3Ewam5tM2VsOWM0d25vaHB4In0.scz7zohNrAPJOgyySWeYmw"
           onViewportChange={viewport => setViewport(viewport)}
         >
           {markerData.city.map(point => (
