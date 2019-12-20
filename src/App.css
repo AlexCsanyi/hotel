@@ -359,6 +359,13 @@ h6 {
   padding-top: 5rem;
   text-align: left;
 }
+
+.services-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .services-center {
   width: 100%;
   margin: 0;
@@ -797,6 +804,13 @@ footer {
 .filter-container {
   padding: 5rem 0;
 }
+
+.filter-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .filter-form {
   width: 60vw;
   margin: 0 auto;

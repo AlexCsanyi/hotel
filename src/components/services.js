@@ -5,6 +5,7 @@ import foodImg from "../images/food.jpg";
 import meetingImg from "../images/meeting.jpg";
 import bedImg from "../images/bed.jpg";
 import dogImg from "../images/dog.jpg";
+import Heidelberg from "../images/logo.png";
 
 export default class Services extends Component {
   state = {
@@ -39,6 +40,9 @@ export default class Services extends Component {
   render() {
     return (
       <section id="services" className="services">
+        <div className='services-image-container'>
+          <img alt="company logo, a large letter H" src={Heidelberg}></img>
+        </div>
         <Title title="Services"></Title>
         <div className="services-center">
           {this.state.services.map((item, index) => {
